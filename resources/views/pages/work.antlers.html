@@ -1,0 +1,44 @@
+<section class="spacer">
+    <h1>{{title}}</h1>
+    
+    <img src="{{main_image}}" alt="{{title}}" max-width="100%" class="spacer">
+
+    
+        {{additional_image_s}}
+            {{ if type == "text" }}
+                <div class="row spacer_small">
+                    <div class="col-md-8 offset-md-2">
+                        <div class="text">
+                            {{ text }}
+                        </div>
+                    </div>
+                </div>
+            {{ elseif type == "images" }}
+            <div class="row additional-images">
+                {{image}}
+                <div class="col">
+                    <img src="{{url}}" alt="{{title}}" width="100%">
+                    <p>{{caption}}</p>
+                </div>
+                {{/image}}
+            </div>
+            {{ /if }}
+        {{/additional_image_s}}
+
+</section>
+
+<div class="row">
+    <h2>More work from <span class="highlight">{{parent:title}}</span></h2>
+    {{ nav :from="parent:uri" :id:not="id"}}
+    {{ unless no_results }}
+            <div class="col-md-3">
+                <a href="{{ url }}">
+                    <div class="thumbnail" style="background-image: url({{main_image}});"></div>
+                    <p>{{title}}</p>
+                </a>
+            </div>
+    {{ /unless }}
+    {{ /nav }}
+</div>
+
+

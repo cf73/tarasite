@@ -1,0 +1,13 @@
+<div class="row">
+    {{ nav :from="uri" }}
+        {{ unless no_results }}
+                <div class="col-md-3">
+                    <a href="{{ url }}">
+                        <div class="thumbnail" style="background-image: url({{main_image}});"></div>
+                        <p>{{title}}</p>
+                    </a>
+                </div>
+        {{ /unless }}
+    {{ /nav }}
+
+</div>

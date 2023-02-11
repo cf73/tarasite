@@ -1,0 +1,14 @@
+a, .nav-link {
+    color: $saphron;
+    text-decoration: none;
+    &:hover {
+        color: $saphron-hover;
+    }
+}
+.highlight {
+    color: $gold;
+    font-style: italic;
+}
+p {
+    color: $light-lighter;
+}

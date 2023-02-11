@@ -1,0 +1,9 @@
+<ul id="nav" class="navbar-nav me-auto show">
+    {{ nav include_home="false" }}
+      <li class="nav-item">
+        <a class="nav-link {{ if is_current || is_parent }} active {{ /if }}" href="{{url}}">
+          <h2>{{ title }}</h2>
+        </a>
+      </li>
+    {{ /nav }}
+</ul>
