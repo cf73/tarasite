@@ -1,12 +1,16 @@
+hide: true
 title: Page
 sections:
   main:
+    display: Main
     fields:
       -
         handle: title
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         handle: content
         field:
@@ -28,6 +32,7 @@ sections:
           display: Template
           localizable: true
   sidebar:
+    display: Sidebar
     fields:
       -
         handle: slug
